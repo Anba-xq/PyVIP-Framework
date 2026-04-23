@@ -15,13 +15,13 @@ COMPILE_ARGS += -full64 -debug_access+all +v2k +define+COCOTB_SIM
 # 如果你的系统环境需要指定特定的编译参数，也可以加在这里
 # SIM_ARGS += ...
 
-# ==============================================
-# Verdi 手动调用规则（默认不执行）
-# ==============================================
-
 
 # 引入 cocotb 仿真核心规则（必须放在最后）
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
+
+# ==============================================
+# Verdi 手动调用规则（默认不执行）
+# ==============================================
 verdi:
 	verdi -sv $(VERILOG_SOURCES) -ssf $(TOPLEVEL).fsdb &
