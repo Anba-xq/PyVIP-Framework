@@ -1,4 +1,3 @@
-# 文件名: test_axis_vip.py
 import cocotb
 import random
 from cocotb.clock import Clock
